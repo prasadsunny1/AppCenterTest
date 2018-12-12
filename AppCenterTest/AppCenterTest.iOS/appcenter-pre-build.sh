@@ -11,11 +11,11 @@ else
     echo "TODAY_BUILD_COUNT Is Availible : Run the Program"
     echo "TODAY_BUILD_COUNT"
     echo $TODAY_BUILD_COUNT
-    DATESTAMP=$(date +"%Y%m%d")
+    DATESTAMP=$(date +"%y%m%d")
     echo "DATESTAMP"
     echo $DATESTAMP
     TODAYBUILD=$((1))
-    VERSION_CODE="$DATESTAMP.$TODAY_BUILD_COUNT"
+    VERSION_CODE="$DATESTAMP$TODAY_BUILD_COUNT"
     TODAY_BUILD_COUNT=$(($TODAY_BUILD_COUNT+1))
     echo "VERSION_CODE"
     echo $VERSION_CODE
@@ -33,7 +33,7 @@ else
     if [ -e "$INFO_PLIST_FILE" ]
     then
         echo "Updating version name to $VERSION_CODE in Info.plist"
-        plutil -replace CFBundleShortVersionString -string $VERSION_CODE $INFO_PLIST_FILE
+        plutil -replace CFBundleVersion -string $VERSION_CODE $INFO_PLIST_FILE
         echo "File content:"
         cat $INFO_PLIST_FILE
     fi

@@ -11,11 +11,11 @@ else
     echo "TODAY_BUILD_COUNT Is Availible : Run the Program"
     echo "TODAY_BUILD_COUNT"
     echo $TODAY_BUILD_COUNT
-    DATESTAMP=$(date +"%Y%m%d")
+    DATESTAMP=$(date +"%y%m%d")
     echo "DATESTAMP"
     echo $DATESTAMP
     TODAYBUILD=$((1))
-    VERSION_CODE="$DATESTAMP.$TODAY_BUILD_COUNT"
+    VERSION_CODE="$DATESTAMP$TODAY_BUILD_COUNT"
     TODAY_BUILD_COUNT=$(($TODAY_BUILD_COUNT+1))
     echo "VERSION_CODE"
     echo $VERSION_CODE
