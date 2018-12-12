@@ -25,7 +25,7 @@ then
     echo "You need define the VERSION_CODE variable in App Center"
     exit
 fi
-ANDROID_MANIFEST_FILE=$APPCENTER_SOURCE_DIRECTORY/AppCenterTest.Android/Properties/AndroidManifest.xml
+ANDROID_MANIFEST_FILE=$APPCENTER_SOURCE_DIRECTORY/AppCenterTest/AppCenterTest.Android/Properties/AndroidManifest.xml
 echo "ANDROID_MANIFEST_FILE"
 echo $ANDROID_MANIFEST_FILE
 if [ -e "$ANDROID_MANIFEST_FILE" ]
