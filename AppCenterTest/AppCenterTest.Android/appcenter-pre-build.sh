@@ -2,7 +2,7 @@
 #
 # For Xamarin Android or iOS, change the version name located in AndroidManifest.xml and Info.plist. 
 # AN IMPORTANT THING: YOU NEED DECLARE VERSION_CODE ENVIRONMENT VARIABLE IN APP CENTER BUILD CONFIGURATION.
-echo "BBBB"
+echo "AAAA"
 DATESTAMP=$(date +"%Y%m%d")
 echo "DATESTAMP"
 echo $DATESTAMP
@@ -19,12 +19,13 @@ echo $TODAYBUILD
 # echo $TODAYBUILD
 echo "APPCENTER_SOURCE_DIRECTORY"
 echo $APPCENTER_SOURCE_DIRECTORY
+ls $APPCENTER_SOURCE_DIRECTORY
 if [ ! -n "$VERSION_CODE" ]
 then
     echo "You need define the VERSION_CODE variable in App Center"
     exit
 fi
-ANDROID_MANIFEST_FILE=$APPCENTER_SOURCE_DIRECTORY/Properties/AndroidManifest.xml
+ANDROID_MANIFEST_FILE=$APPCENTER_SOURCE_DIRECTORY/AppCenterTest.Android/Properties/AndroidManifest.xml
 echo "ANDROID_MANIFEST_FILE"
 echo $ANDROID_MANIFEST_FILE
 if [ -e "$ANDROID_MANIFEST_FILE" ]
